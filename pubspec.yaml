@@ -39,6 +39,7 @@ dependencies:
   dio: ^5.7.0
   google_fonts: ^6.2.1
   onboarding: ^4.0.2
+  smooth_page_indicator: ^1.2.0+3
 
 dev_dependencies:
   flutter_test:
@@ -69,6 +70,9 @@ flutter:
   assets:
     - assets/images/splash/arabesque.png
     - assets/images/splash/ramadan-icon.png
+    - assets/images/introduction/chaplet-icon.png
+    - assets/images/introduction/masjid-icon.png
+    - assets/images/introduction/noise-icon.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
