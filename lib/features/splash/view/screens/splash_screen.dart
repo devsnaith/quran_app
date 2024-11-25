@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:quran/features/intro/view/splash/screens/intro_screen.dart';
-import 'package:quran/features/intro/view/splash/widgets/splash/splash_background.dart';
-import 'package:quran/features/intro/view/splash/widgets/splash/splash_icon.dart';
+import 'package:quran/features/introduction/view/screens/intro_screen.dart';
+import 'package:quran/features/splash/view/widgets/splash_background.dart';
+import 'package:quran/features/splash/view/widgets/splash_icon.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});

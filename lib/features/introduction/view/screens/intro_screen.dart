@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:onboarding/onboarding.dart';
 import 'package:quran/core/constants/app_texts.dart';
-import 'package:quran/features/intro/view/splash/widgets/introduction/introduction_page.dart';
+import 'package:quran/features/introduction/view/widgets/introduction_page.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 final List<IntroductionPage> pages = [
