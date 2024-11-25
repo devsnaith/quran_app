@@ -1,52 +1,37 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:onboarding/onboarding.dart';
 import 'package:quran/core/constants/app_texts.dart';
+import 'package:quran/features/introduction/repository/introduction_repository.dart';
+import 'package:quran/features/introduction/view-model/cubit/introduction_cubit.dart';
 import 'package:quran/features/introduction/view/widgets/introduction_page.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-final List<IntroductionPage> pages = [
-  IntroductionPage(
-    AppTexts.firstIntroductionPageTitle,
-    AppTexts.firstIntroductionPageDescraption,
-    Image.asset("assets/images/splash/ramadan-icon.png", width: 96),
-  ),
-  IntroductionPage(
-    AppTexts.secondIntroductionPageTitle,
-    AppTexts.secondIntroductionPageDescraption,
-    Image.asset("assets/images/introduction/masjid-icon.png")
-  ),
-  IntroductionPage(
-    AppTexts.thirdIntroductionPageTitle,
-    AppTexts.thirdIntroductionPageDescraption,
-    Image.asset("assets/images/introduction/noise-icon.png")
-  ),
-  IntroductionPage(
-    AppTexts.lastIntroductionPageTitle,
-    AppTexts.lastIntroductionPageDescraption,
-    Image.asset("assets/images/introduction/chaplet-icon.png")
-  )
-];
-
-class IntroScreen extends StatefulWidget {
-  const IntroScreen({super.key});
+class IntroductionScreen extends StatefulWidget {
+  const IntroductionScreen({super.key});
 
   @override
-  State<IntroScreen> createState() => _IntroScreenState();
+  State<IntroductionScreen> createState() => _IntroductionScreen();
 }
 
-class _IntroScreenState extends State<IntroScreen> {
+class _IntroductionScreen extends State<IntroductionScreen> {
 
-  void whenIntroductionComplete(BuildContext context) {
-    Widget goToScreen = const Placeholder();
-    MaterialPageRoute pageRoute = MaterialPageRoute(builder: (context) => goToScreen);
-    Navigator.of(context).pushReplacement(pageRoute);
+  late IntroductionCubit cubit;
+  late List<IntroductionPage> pages;
+
+  @override
+  void initState() {
+    super.initState();
+    
+    cubit = context.read<IntroductionCubit>();
+    IntroductionRepository repository = cubit.getIntroductionRepository();
+    pages = repository.getAllIntroductionModelsAsPages();
   }
 
   int currentIndex = 0;
   void onPageChanges(double netDragDistance, int pagesLength, int currentIndex, SlideDirection slideDirection) {
     this.currentIndex = currentIndex;
-    setState(() {
-    });
+    setState(() {});
   }
 
   @override
@@ -71,7 +56,7 @@ class _IntroScreenState extends State<IntroScreen> {
                   count: pages.length,
                   effect: const ExpandingDotsEffect(), 
                 ) : OutlinedButton(
-                  onPressed: () => whenIntroductionComplete(context),
+                  onPressed: () => cubit.introductionCompleted(),
                    child: const Text(AppTexts.endIntroductionPageButtonText)
                 ),
               ),

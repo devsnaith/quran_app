@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:quran/core/constants/app_constant.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:quran/features/splash/Model/splash_model.dart';
+import 'package:quran/features/splash/view-model/cubit/splash_cubit.dart';
 
 class SplashIcon extends StatefulWidget {
-  const SplashIcon(this.listener, {super.key});
-
-  /* A Simple callback to let ``splash_screen.dart``
-    knows that the animation completed */
-  final VoidCallback listener;
+  
+  const SplashIcon({super.key});
 
   @override
   State<SplashIcon> createState() => _SplashIcon();
@@ -16,17 +15,19 @@ class _SplashIcon extends State<SplashIcon> with SingleTickerProviderStateMixin 
 
   late Animation<double> animatedWidth;
   late AnimationController animationController;
+  late SplashModel splashModel;
 
   @override
   void initState() {
     
     super.initState();
-    
+    splashModel = context.read<SplashCubit>().getSplashRepository().getSplashModel();
+
     animationController = AnimationController(vsync: this)
-    ..duration = const Duration(milliseconds: AppConstant.splashScreenDuration)
+    ..duration = Duration(milliseconds: splashModel.splashScreenDuration)
     ..addListener(() => onUpdate());
 
-    Duration splashScreenDelayDuration = const Duration(milliseconds: AppConstant.splashScreenBeforeAnimationDelay);
+    Duration splashScreenDelayDuration = Duration(milliseconds: splashModel.splashScreenBeforeAnimationDelay);
     Future.delayed(splashScreenDelayDuration, () => animationController.forward());
 
   }
@@ -38,9 +39,7 @@ class _SplashIcon extends State<SplashIcon> with SingleTickerProviderStateMixin 
       return;
     }
     
-    Duration splashScreenDelayDuration = const Duration(milliseconds: AppConstant.splashScreenAfterAnimationDelay);
-    Future.delayed(splashScreenDelayDuration, () => widget.listener.call());
-
+    context.read<SplashCubit>().splashCompleted();
   }
 
   @override
@@ -56,7 +55,7 @@ class _SplashIcon extends State<SplashIcon> with SingleTickerProviderStateMixin 
 
       iconWidth = (iconWidth / 2) + animatedWidth.value;
       
-      return Image.asset(AppConstant.splashScreenIcon, width: iconWidth);   
+      return Image.asset(splashModel.splashScreenIcon, width: iconWidth);   
       
     });
   }

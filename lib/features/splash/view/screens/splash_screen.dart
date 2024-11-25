@@ -1,26 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:quran/features/introduction/view/screens/intro_screen.dart';
 import 'package:quran/features/splash/view/widgets/splash_background.dart';
 import 'package:quran/features/splash/view/widgets/splash_icon.dart';
 
 class SplashScreen extends StatelessWidget {
+  
   const SplashScreen({super.key});
-
-  void whenSplashComplete(BuildContext context) {
-    Widget goToScreen = const IntroScreen();
-    MaterialPageRoute pageRoute = MaterialPageRoute(builder: (context) => goToScreen);
-    Navigator.of(context).pushReplacement(pageRoute);
-  }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Stack(
         children: [
-          const SplashBackground(),
-          Center(
-            child: SplashIcon(() => whenSplashComplete(context))
-          ),
+          SplashBackground(),
+          Center(child: SplashIcon()),
         ],
       ),
     );
