@@ -1,17 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:quran/core/utils/fonts_style.dart';
+import 'package:quran/features/introduction/Model/introduction_model.dart';
 
 class IntroductionPage extends StatelessWidget {
-  const IntroductionPage(
-    this.title,
-    this.descraption,
-    this.imageIcon,
-    {super.key}
-  );
-
-  final String title;
-  final String descraption;
-  final Widget imageIcon;
+  
+  final IntroductionModel introductionModel;
+  const IntroductionPage(this.introductionModel, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,18 +26,18 @@ class IntroductionPage extends StatelessWidget {
                 
                 Padding(
                   padding: const EdgeInsets.only(bottom: 24.0),
-                  child: imageIcon,
+                  child: introductionModel.introductionIconWidget,
                 ),
 
                 Text(
                   style: FontsStyle.italicBoldNotoSans(24),
-                  title,
+                  introductionModel.introductionTitle,
                 ),
                 
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 24),
                   child: Text(
-                    descraption,
+                    introductionModel.introductionDescraption,
                     textAlign: TextAlign.center,
                     style: FontsStyle.boldDmSerifText(16),
                   ),
