@@ -21,7 +21,7 @@ class CustomNavBar extends StatelessWidget {
       tabBackgroundColor: Colors.teal,
       color: Colors.black,
       curve: Curves.fastOutSlowIn,
-      tabs: [
+      tabs: const [
         GButton(
           icon: CupertinoIcons.home,
           text: 'Home',
