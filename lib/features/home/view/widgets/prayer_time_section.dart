@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:quran/features/view/widgets/data_show.dart';
-import 'package:quran/features/view/widgets/pray_clock.dart';
-import 'package:quran/features/view/widgets/pray_time_items.dart';
+import 'package:quran/features/home/view/widgets/data_show.dart';
+import 'package:quran/features/home/view/widgets/pray_clock.dart';
+import 'package:quran/features/home/view/widgets/pray_time_items.dart';
 
 class PrayerTimeSection extends StatelessWidget {
   const PrayerTimeSection({

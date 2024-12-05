@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:quran/features/view/widgets/pray_time_content.dart';
+import 'package:quran/features/home/view/widgets/pray_time_content.dart';
 
 class PrayTimeItem extends StatelessWidget {
   const PrayTimeItem({

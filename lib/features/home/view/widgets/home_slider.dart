@@ -1,6 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:quran/features/view/widgets/hadeth_card.dart';
+import 'package:quran/features/home/view/widgets/hadeth_card.dart';
 
 class HomeSlider extends StatelessWidget {
   const HomeSlider({
