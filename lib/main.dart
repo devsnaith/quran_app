@@ -4,6 +4,7 @@ import 'package:quran/features/introduction/view-model/cubit/introduction_cubit.
 import 'package:quran/features/introduction/view/screens/introduction_screen.dart';
 import 'package:quran/features/splash/view-model/cubit/splash_cubit.dart';
 
+import 'features/home/view/screens/home_view.dart';
 import 'features/splash/view/screens/splash_screen.dart';
 
 void main() {
@@ -34,12 +35,14 @@ class MyApp extends StatelessWidget {
               return const SplashScreen();
             }
 
+            /* Intro Screen */
             final introductionState = context.watch<IntroductionCubit>().state;
             if(introductionState is IntroductionInitialized) {
               return const IntroductionScreen();
             }
-
-            return const Placeholder();
+            
+            /* Home Screen */
+            return const HomeView();
           },
         ),
       ),
