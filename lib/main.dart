@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:quran/features/home/view-model/cubit/location_cubit.dart';
 import 'package:quran/features/introduction/view-model/cubit/introduction_cubit.dart';
 import 'package:quran/features/introduction/view/screens/introduction_screen.dart';
 import 'package:quran/features/navigator/view-model/cubit/navigator_cubit.dart';
@@ -27,6 +28,7 @@ class MyApp extends StatelessWidget {
           BlocProvider<SplashCubit>(create: (context) => SplashCubit()),
           BlocProvider<IntroductionCubit>(create: (context) => IntroductionCubit()),
           BlocProvider<NavigatorCubit>(create: (context) => NavigatorCubit()),
+          BlocProvider<LocationCubit>(create: (context) => LocationCubit()),
         ],
         child: BlocBuilder<SplashCubit, SplashState>(
           builder: (context, state) {

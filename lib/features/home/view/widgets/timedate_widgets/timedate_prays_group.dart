@@ -1,16 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:quran/features/home/repositories/timedate_repository.dart';
 
-class PrayTimesRow extends StatefulWidget {
-  const PrayTimesRow({super.key});
-
-  @override
-  State<PrayTimesRow> createState() => _PrayTimesRowState();
-}
-
-class _PrayTimesRowState extends State<PrayTimesRow> {
+class PrayTimesRow extends StatelessWidget {
+  const PrayTimesRow(this.timeDateRepository, {super.key});
   
-  PrayTimesRepository repository = PrayTimesRepository();
+  final TimeDateRepository timeDateRepository; 
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +18,7 @@ class _PrayTimesRowState extends State<PrayTimesRow> {
           child: IntrinsicHeight(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: repository.getPrayTimesAsWidgets()
+              children: timeDateRepository.getPrayTimesAsWidgets()
             ),
           ),
         ),

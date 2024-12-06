@@ -14,6 +14,9 @@ class AppColors {
   static Color navigatorActiveBtnTextBgColor = Colors.teal.shade900;
   static Color timedateCardTextFgColor = Colors.white;
   static Color timedateCardBgColor = Colors.teal.withOpacity(0.9);
+  static Color locationErrorCardBgColor = Colors.teal;
+  static Color locationErrorCardTextFgColor =  Colors.teal.shade100;
+  static Color locationErrorCardIconColor = Colors.teal.shade200;
   static List<Color> hadethCardColors = [
     const Color.fromARGB(255, 4, 90, 81),
     Colors.green.shade900,

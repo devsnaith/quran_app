@@ -40,4 +40,12 @@ class FontsStyle {
       fontWeight: FontWeight.w900
     );
   }
+  
+  static lato(double size, Color color) {
+    return GoogleFonts.lato(
+      color: color,
+      fontSize: size,
+      fontWeight: FontWeight.w900
+    );
+  }
 }

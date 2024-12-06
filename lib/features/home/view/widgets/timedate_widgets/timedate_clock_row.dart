@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:quran/core/utils/fonts_style.dart';
+import 'package:quran/features/home/repositories/timedate_repository.dart';
 
 class PrayClock extends StatelessWidget {
-  const PrayClock({
-    super.key,
-  });
+  const PrayClock(this.timeDateRepository, {super.key});
+
+  final TimeDateRepository timeDateRepository; 
 
   @override
   Widget build(BuildContext context) {
@@ -13,8 +14,8 @@ class PrayClock extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text("04:40", style: FontsStyle.w990Lato(38)),
-          Text("Fajr 3 hours 9 min left", style: FontsStyle.w990Lato(16)),
+          Text(timeDateRepository.getCurrentTime(), style: FontsStyle.w990Lato(38)),
+          // Text("Fajr 3 hours 9 min left", style: FontsStyle.w990Lato(16)),
         ],
       ),
     );
