@@ -47,6 +47,12 @@ dependencies:
   flutter_timezone: ^3.0.1
   intl: ^0.20.1
   animated_flip_counter: ^0.3.4
+  freezed: ^2.5.7
+  freezed_annotation: ^2.4.4
+  json_serializable: ^6.9.0
+  json_annotation: ^4.9.0
+  build_runner: ^2.4.13
+  easy_image_viewer: ^1.5.1
 
 dev_dependencies:
   flutter_lints: ^4.0.0
@@ -72,7 +78,21 @@ flutter:
     - assets/images/introduction/chaplet-icon.png
     - assets/images/introduction/masjid-icon.png
     - assets/images/introduction/noise-icon.png
-
+    - assets/json/surah.json
+    - assets/images/quran_pages/578.png
+    - assets/images/quran_pages/579.png
+    - assets/images/quran_pages/580.png
+    - assets/images/quran_pages/177.png
+    - assets/images/quran_pages/178.png
+    - assets/images/quran_pages/179.png
+    - assets/images/quran_pages/180.png
+    - assets/images/quran_pages/181.png
+    - assets/images/quran_pages/182.png
+    - assets/images/quran_pages/183.png
+    - assets/images/quran_pages/184.png
+    - assets/images/quran_pages/185.png
+    - assets/images/quran_pages/186.png
+    - assets/images/quran_pages/1.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
   # For details regarding adding assets from package dependencies, see

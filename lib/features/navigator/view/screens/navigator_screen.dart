@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_islamic_icons/flutter_islamic_icons.dart';
 import 'package:quran/core/constants/app_colors.dart';
 import 'package:quran/core/constants/app_constant.dart';
+import 'package:quran/core/constants/app_texts.dart';
 import 'package:quran/core/utils/fonts_style.dart';
 import 'package:quran/core/widgets/arabesque.dart';
 import 'package:quran/features/navigator/repository/navigator_repository.dart';
@@ -17,9 +18,9 @@ class AppNavigator extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.homePageBgColor,
       appBar: AppBar(
-        backgroundColor: Colors.teal,
+        backgroundColor: AppColors.appBarBgColor,
         leading: const Icon(FlutterIslamicIcons.mosque, color: Colors.white),
-        title: Text("Welcome to the App ;)", style: FontsStyle.lato(16, Colors.white)),
+        title: Text(AppTexts.appBarText, style: FontsStyle.lato(16, AppColors.appBarTextFgColor)),
       ),
       body: Stack(
         children: [
@@ -31,7 +32,7 @@ class AppNavigator extends StatelessWidget {
           })
         ],
       ),
-      bottomNavigationBar: const NavigatorBar(),
+      bottomNavigationBar: const SafeArea(child: NavigatorBar())
     );
   }
 }

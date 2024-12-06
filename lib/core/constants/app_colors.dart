@@ -22,6 +22,10 @@ class AppColors {
   static Color sebhaCounterBgColor = Colors.teal.shade100;
   static Color sebhaCounterTextFgColor = Colors.black.withOpacity(0.6);
   static Color sebhaButtonsBgColor = Colors.teal.shade100;
+  static Color appBarTextFgColor = Colors.white;
+  static Color appBarBgColor = Colors.teal;
+  static Color surahCardBgColor = Colors.teal.shade100.withOpacity(0.9);
+  static Color surahCardTextFgColor = Colors.black;
   static List<Color> hadethCardColors = [
     const Color.fromARGB(255, 4, 90, 81),
     Colors.green.shade900,

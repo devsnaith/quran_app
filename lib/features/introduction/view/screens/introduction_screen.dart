@@ -48,45 +48,47 @@ class _IntroductionScreen extends State<IntroductionScreen> {
             onPageChanges: onPageChanges,
             startIndex: 0,
           ),
-          SizedBox(
-            width: MediaQuery.of(context).size.width,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 32),
-                  child: currentIndex < pages.length - 1 ? AnimatedSmoothIndicator(
-                    activeIndex: currentIndex,
-                    count: pages.length,
-                    effect: ExpandingDotsEffect(
-                      dotColor: AppColors.introductionPageIndicatorDotsColor,
-                      activeDotColor: AppColors.introductionPageActiveIndicatorDotsColor,
-                      radius: 5
-                    ), 
-                  ) : 
-                  SizedBox(
-                    height: 52,
-                    width: MediaQuery.of(context).size.width - 32,
-                    child: GestureDetector(
-                      onTap: () => cubit.introductionCompleted(),
-                      child: Card(
-                        color: AppColors.introductionPageEndButtonBgColor,
-                        child: Center(
-                          child: Text(
-                            AppTexts.endIntroductionPageButtonText,
-                            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.teal.shade100),  
+          SafeArea(
+            child: SizedBox(
+              width: MediaQuery.of(context).size.width,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 32),
+                    child: currentIndex < pages.length - 1 ? AnimatedSmoothIndicator(
+                      activeIndex: currentIndex,
+                      count: pages.length,
+                      effect: ExpandingDotsEffect(
+                        dotColor: AppColors.introductionPageIndicatorDotsColor,
+                        activeDotColor: AppColors.introductionPageActiveIndicatorDotsColor,
+                        radius: 5
+                      ), 
+                    ) : 
+                    SizedBox(
+                      height: 52,
+                      width: MediaQuery.of(context).size.width - 32,
+                      child: GestureDetector(
+                        onTap: () => cubit.introductionCompleted(),
+                        child: Card(
+                          color: AppColors.introductionPageEndButtonBgColor,
+                          child: Center(
+                            child: Text(
+                              AppTexts.endIntroductionPageButtonText,
+                              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.teal.shade100),  
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                  )
-                  // OutlinedButton(
-                  //   onPressed: () => cubit.introductionCompleted(),
-                  //    child: const Text(AppTexts.endIntroductionPageButtonText)
-                  // ),
-                ),
-              ],
+                    )
+                    // OutlinedButton(
+                    //   onPressed: () => cubit.introductionCompleted(),
+                    //    child: const Text(AppTexts.endIntroductionPageButtonText)
+                    // ),
+                  ),
+                ],
+              ),
             ),
           ),
         ]

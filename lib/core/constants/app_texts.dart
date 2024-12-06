@@ -19,6 +19,8 @@ class AppTexts {
   static const navigatorJuzzaButtonText = "Jyzza"; 
   static const navigatorSebhaButtonText = "Sebha";
 
+  static const appBarText = "Welcome to the App ;)";
+
   static const sebhaInfoCardTitle = "Tasbih";
   static const sebhaInfoCardSubTitle = lastIntroductionPageDescraption;
 }

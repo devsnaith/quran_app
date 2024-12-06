@@ -8,6 +8,7 @@ import 'package:quran/features/navigator/view/screens/navigator_screen.dart';
 import 'package:quran/features/sebha/view-model/cubit/sebha_cubit.dart';
 import 'package:quran/features/splash/view-model/cubit/splash_cubit.dart';
 import 'package:quran/features/splash/view/screens/splash_screen.dart';
+import 'package:quran/features/surah/view-model/cubit/surah_cubit.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
           BlocProvider<NavigatorCubit>(create: (context) => NavigatorCubit()),
           BlocProvider<LocationCubit>(create: (context) => LocationCubit()),
           BlocProvider<SebhaCubit>(create: (context) => SebhaCubit()),
+          BlocProvider<SurahCubit>(create: (context) => SurahCubit()),
         ],
         child: BlocBuilder<SplashCubit, SplashState>(
           builder: (context, state) {
