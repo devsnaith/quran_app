@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:quran/features/introduction/view-model/cubit/introduction_cubit.dart';
 import 'package:quran/features/introduction/view/screens/introduction_screen.dart';
+import 'package:quran/features/navigator/view-model/cubit/navigator_cubit.dart';
+import 'package:quran/features/navigator/view/screens/navigator_screen.dart';
 import 'package:quran/features/splash/view-model/cubit/splash_cubit.dart';
-
-import 'features/home/view/screens/home_view.dart';
-import 'features/splash/view/screens/splash_screen.dart';
+import 'package:quran/features/splash/view/screens/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.teal),
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
@@ -26,6 +26,7 @@ class MyApp extends StatelessWidget {
         providers: [
           BlocProvider<SplashCubit>(create: (context) => SplashCubit()),
           BlocProvider<IntroductionCubit>(create: (context) => IntroductionCubit()),
+          BlocProvider<NavigatorCubit>(create: (context) => NavigatorCubit()),
         ],
         child: BlocBuilder<SplashCubit, SplashState>(
           builder: (context, state) {
@@ -41,8 +42,8 @@ class MyApp extends StatelessWidget {
               return const IntroductionScreen();
             }
             
-            /* Home Screen */
-            return const HomeView();
+            /* Navigator */
+            return const AppNavigator();
           },
         ),
       ),

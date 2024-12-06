@@ -1,5 +1,4 @@
-import 'dart:ui';
-
+import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class FontsStyle {
@@ -15,6 +14,30 @@ class FontsStyle {
     return GoogleFonts.dmSerifText(
       fontWeight: FontWeight.bold,
       fontSize: size,
+    );
+  }
+
+  static whiteLateef(double size) {
+    return GoogleFonts.lateef(
+      color: Colors.white,
+      fontSize: size,
+    );
+  }
+
+  static w990ItalicLato(double size) {
+    return GoogleFonts.lato(
+      color: Colors.white,
+      fontSize: size,
+      fontStyle: FontStyle.italic,
+      fontWeight: FontWeight.w900
+    );
+  }
+
+  static w990Lato(double size) {
+    return GoogleFonts.lato(
+      color: Colors.white,
+      fontSize: size,
+      fontWeight: FontWeight.w900
     );
   }
 }

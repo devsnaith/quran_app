@@ -1,35 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:quran/features/home/view/widgets/custom_nav_bar.dart';
-import 'package:quran/features/home/view/widgets/custom_search_bar.dart';
-import 'package:quran/features/home/view/widgets/home_slider.dart';
-import 'package:quran/features/home/view/widgets/prayer_time_section.dart';
+import 'package:quran/features/home/view/widgets/hadethslider_widgets/hadeth_slider.dart';
+import 'package:quran/features/home/view/widgets/timedate_widgets/timedate_card.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Color(0xffEEFAED),
-      appBar: AppBar(
-        backgroundColor: Colors.teal,
-        title: const CustomSearchBar(),
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            SizedBox(
-              height: 20,
+    return LayoutBuilder(builder: (context, constraints) {
+      return  SingleChildScrollView(
+        child: ConstrainedBox(
+          constraints: BoxConstraints(
+            minHeight: constraints.maxHeight
+          ),
+          child: const IntrinsicHeight(
+            child: Column(
+              children: [
+                Expanded(child: HadethSlider()),
+                PrayerTimeSection()
+              ],
             ),
-            HomeSlider(),
-            PrayerTimeSection()
-          ],
+          ),
         ),
-      ),
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: CustomNavBar(),
-      ),
-    );
+      );
+    });
   }
 }

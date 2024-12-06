@@ -13,5 +13,10 @@ class AppTexts {
   static const lastIntroductionPageDescraption = "Keep track of your dhikr with our easy-to-use digital rosary.";
   
   static const endIntroductionPageButtonText = "Start the journey";
-  
+
+  static const navigatorHomeButtonText = "Home";
+  static const navigatorSurahButtonText = "Surah"; 
+  static const navigatorJuzzaButtonText = "Jyzza"; 
+  static const navigatorSebhaButtonText = "Sebha"; 
+
 }
