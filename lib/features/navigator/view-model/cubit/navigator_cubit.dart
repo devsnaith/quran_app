@@ -1,10 +1,10 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
-import 'package:meta/meta.dart';
 import 'package:quran/core/constants/app_constant.dart';
 import 'package:quran/features/home/view/screens/home_view.dart';
 import 'package:quran/features/navigator/model/navigator_model.dart';
 import 'package:quran/features/navigator/repository/navigator_repository.dart';
+import 'package:quran/features/sebha/view/screens/sebha_screen.dart';
 
 part 'navigator_state.dart';
 
@@ -16,6 +16,9 @@ class NavigatorCubit extends Cubit<AppNavigatorState> {
       index: 0,
       pages: [
         const HomeView(),
+        const Placeholder(),
+        const Placeholder(),
+        const SebhaScreen()
       ]),
   );
 

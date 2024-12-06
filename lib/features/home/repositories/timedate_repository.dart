@@ -20,6 +20,14 @@ class TimeDateRepository {
   };
 
   final List<PrayTimeModel> _prayTimes = [];
+
+  void addPrayTimesPlaceHolder() {
+    _prayTimes.clear();
+    timesIcons.forEach((key, value) {
+      _prayTimes.add(PrayTimeModel(prayName: key, time: "--:--", timeIcon: value));
+
+    });
+  }
   
   List<Widget> getPrayTimesAsWidgets() {
     List<Widget> widgets = [];
@@ -60,6 +68,8 @@ class TimeDateRepository {
           _prayTimes.add(PrayTimeModel(prayName: key, time: time, timeIcon: timesIcons[key]!));
         }
       });
+    }else {
+      addPrayTimesPlaceHolder();
     }
   }
 }

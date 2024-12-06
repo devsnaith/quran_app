@@ -12,7 +12,7 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
-      return  SingleChildScrollView(
+      return SingleChildScrollView(
         child: ConstrainedBox(
           constraints: BoxConstraints(
             minHeight: constraints.maxHeight

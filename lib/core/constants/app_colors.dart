@@ -17,6 +17,11 @@ class AppColors {
   static Color locationErrorCardBgColor = Colors.teal;
   static Color locationErrorCardTextFgColor =  Colors.teal.shade100;
   static Color locationErrorCardIconColor = Colors.teal.shade200;
+  static Color sebhaInfoCardBgColor = Colors.teal.shade100;
+  static Color sebhaInfoCardTextFgColor = Colors.black.withOpacity(0.8);
+  static Color sebhaCounterBgColor = Colors.teal.shade100;
+  static Color sebhaCounterTextFgColor = Colors.black.withOpacity(0.6);
+  static Color sebhaButtonsBgColor = Colors.teal.shade100;
   static List<Color> hadethCardColors = [
     const Color.fromARGB(255, 4, 90, 81),
     Colors.green.shade900,

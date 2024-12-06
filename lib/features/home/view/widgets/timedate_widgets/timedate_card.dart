@@ -42,6 +42,7 @@ class _PrayerTimeSectionState extends State<PrayerTimeSection> {
   void initState() {
     super.initState();
     timeDateRepository = context.read<LocationCubit>().getTimeDateRepository();
+    timeDateRepository.addPrayTimesPlaceHolder();
     initializeTimer();
   }
 
