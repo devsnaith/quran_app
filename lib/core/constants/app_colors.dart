@@ -19,6 +19,8 @@ class AppColors {
   static Color locationErrorCardIconColor = Colors.teal.shade200;
   static Color sebhaInfoCardBgColor = Colors.teal.shade100;
   static Color sebhaInfoCardTextFgColor = Colors.black.withOpacity(0.8);
+  static Color juzInfoCardBgColor = Colors.teal.shade100;
+  static Color juzInfoCardTextFgColor = Colors.black.withOpacity(0.8);
   static Color sebhaCounterBgColor = Colors.teal.shade100;
   static Color sebhaCounterTextFgColor = Colors.black.withOpacity(0.6);
   static Color sebhaButtonsBgColor = Colors.teal.shade100;
@@ -26,6 +28,10 @@ class AppColors {
   static Color appBarBgColor = Colors.teal;
   static Color surahCardBgColor = Colors.teal.shade100.withOpacity(0.9);
   static Color surahCardTextFgColor = Colors.black;
+  static Color juzScreenElementsGroupBgColor = Colors.teal.shade100;
+  static Color juzScreenElementsTextFgColor = Colors.black;
+  static Color juzScreenElementsBackIconBgColor = Colors.teal.withOpacity(0.2);
+  static Color juzScreenElementsBgColor = Colors.teal.shade200;
   static List<Color> hadethCardColors = [
     const Color.fromARGB(255, 4, 90, 81),
     Colors.green.shade900,

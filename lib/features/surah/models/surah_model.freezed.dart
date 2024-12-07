@@ -502,8 +502,8 @@ SurahJuzVerseModel _$SurahJuzVerseModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$SurahJuzVerseModel {
-  String get from => throw _privateConstructorUsedError;
-  String get to => throw _privateConstructorUsedError;
+  String get start => throw _privateConstructorUsedError;
+  String get end => throw _privateConstructorUsedError;
 
   /// Serializes this SurahJuzVerseModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -521,7 +521,7 @@ abstract class $SurahJuzVerseModelCopyWith<$Res> {
           SurahJuzVerseModel value, $Res Function(SurahJuzVerseModel) then) =
       _$SurahJuzVerseModelCopyWithImpl<$Res, SurahJuzVerseModel>;
   @useResult
-  $Res call({String from, String to});
+  $Res call({String start, String end});
 }
 
 /// @nodoc
@@ -539,17 +539,17 @@ class _$SurahJuzVerseModelCopyWithImpl<$Res, $Val extends SurahJuzVerseModel>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? from = null,
-    Object? to = null,
+    Object? start = null,
+    Object? end = null,
   }) {
     return _then(_value.copyWith(
-      from: null == from
-          ? _value.from
-          : from // ignore: cast_nullable_to_non_nullable
+      start: null == start
+          ? _value.start
+          : start // ignore: cast_nullable_to_non_nullable
               as String,
-      to: null == to
-          ? _value.to
-          : to // ignore: cast_nullable_to_non_nullable
+      end: null == end
+          ? _value.end
+          : end // ignore: cast_nullable_to_non_nullable
               as String,
     ) as $Val);
   }
@@ -563,7 +563,7 @@ abstract class _$$SurahJuzVerseModelImplCopyWith<$Res>
       __$$SurahJuzVerseModelImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String from, String to});
+  $Res call({String start, String end});
 }
 
 /// @nodoc
@@ -579,17 +579,17 @@ class __$$SurahJuzVerseModelImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? from = null,
-    Object? to = null,
+    Object? start = null,
+    Object? end = null,
   }) {
     return _then(_$SurahJuzVerseModelImpl(
-      from: null == from
-          ? _value.from
-          : from // ignore: cast_nullable_to_non_nullable
+      start: null == start
+          ? _value.start
+          : start // ignore: cast_nullable_to_non_nullable
               as String,
-      to: null == to
-          ? _value.to
-          : to // ignore: cast_nullable_to_non_nullable
+      end: null == end
+          ? _value.end
+          : end // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -598,19 +598,19 @@ class __$$SurahJuzVerseModelImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$SurahJuzVerseModelImpl implements _SurahJuzVerseModel {
-  const _$SurahJuzVerseModelImpl({required this.from, required this.to});
+  const _$SurahJuzVerseModelImpl({required this.start, required this.end});
 
   factory _$SurahJuzVerseModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$SurahJuzVerseModelImplFromJson(json);
 
   @override
-  final String from;
+  final String start;
   @override
-  final String to;
+  final String end;
 
   @override
   String toString() {
-    return 'SurahJuzVerseModel(from: $from, to: $to)';
+    return 'SurahJuzVerseModel(start: $start, end: $end)';
   }
 
   @override
@@ -618,13 +618,13 @@ class _$SurahJuzVerseModelImpl implements _SurahJuzVerseModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SurahJuzVerseModelImpl &&
-            (identical(other.from, from) || other.from == from) &&
-            (identical(other.to, to) || other.to == to));
+            (identical(other.start, start) || other.start == start) &&
+            (identical(other.end, end) || other.end == end));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, from, to);
+  int get hashCode => Object.hash(runtimeType, start, end);
 
   /// Create a copy of SurahJuzVerseModel
   /// with the given fields replaced by the non-null parameter values.
@@ -645,16 +645,16 @@ class _$SurahJuzVerseModelImpl implements _SurahJuzVerseModel {
 
 abstract class _SurahJuzVerseModel implements SurahJuzVerseModel {
   const factory _SurahJuzVerseModel(
-      {required final String from,
-      required final String to}) = _$SurahJuzVerseModelImpl;
+      {required final String start,
+      required final String end}) = _$SurahJuzVerseModelImpl;
 
   factory _SurahJuzVerseModel.fromJson(Map<String, dynamic> json) =
       _$SurahJuzVerseModelImpl.fromJson;
 
   @override
-  String get from;
+  String get start;
   @override
-  String get to;
+  String get end;
 
   /// Create a copy of SurahJuzVerseModel
   /// with the given fields replaced by the non-null parameter values.

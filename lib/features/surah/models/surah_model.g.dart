@@ -47,13 +47,13 @@ Map<String, dynamic> _$$SurahJuzModelImplToJson(_$SurahJuzModelImpl instance) =>
 _$SurahJuzVerseModelImpl _$$SurahJuzVerseModelImplFromJson(
         Map<String, dynamic> json) =>
     _$SurahJuzVerseModelImpl(
-      from: json['start'] as String,
-      to: json['end'] as String,
+      start: json['start'] as String,
+      end: json['end'] as String,
     );
 
 Map<String, dynamic> _$$SurahJuzVerseModelImplToJson(
         _$SurahJuzVerseModelImpl instance) =>
     <String, dynamic>{
-      'start': instance.from,
-      'end': instance.to,
+      'start': instance.start,
+      'end': instance.end,
     };

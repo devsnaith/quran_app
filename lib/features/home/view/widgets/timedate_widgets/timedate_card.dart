@@ -70,7 +70,10 @@ class _PrayerTimeSectionState extends State<PrayerTimeSection> {
             children: [
               DateRow(timeDateRepository),
               PrayClock(timeDateRepository),
-              PrayTimesRow(timeDateRepository),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                child: PrayTimesRow(timeDateRepository),
+              ),
             ],
           );
         },

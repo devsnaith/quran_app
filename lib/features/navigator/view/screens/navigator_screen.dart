@@ -28,7 +28,7 @@ class AppNavigator extends StatelessWidget {
           BlocBuilder<NavigatorCubit, AppNavigatorState>(builder: (context, state) {            
             int pageIndex = state is NavigatorInitial ? AppConstant.navigatorBarDefaultIndex : (state as NavigatorPageChanged).navigatorModel.index;
             NavigatorRepository repo = context.read<NavigatorCubit>().getNavigatorRepository();
-            return repo.getPageByIndex(pageIndex);
+            return SafeArea(child: repo.getPageByIndex(pageIndex));
           })
         ],
       ),

@@ -32,8 +32,8 @@ class SurahJuzModel with _$SurahJuzModel {
 @freezed
 class SurahJuzVerseModel with _$SurahJuzVerseModel {
   const factory SurahJuzVerseModel({
-    required String from,
-    required String to,
+    required String start,
+    required String end,
   }) = _SurahJuzVerseModel;
 
   factory SurahJuzVerseModel.fromJson(Map<String, Object?> json) => _$SurahJuzVerseModelFromJson(json);

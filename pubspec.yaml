@@ -53,6 +53,7 @@ dependencies:
   json_annotation: ^4.9.0
   build_runner: ^2.4.13
   easy_image_viewer: ^1.5.1
+  flip_card: ^0.7.0
 
 dev_dependencies:
   flutter_lints: ^4.0.0
@@ -79,6 +80,7 @@ flutter:
     - assets/images/introduction/masjid-icon.png
     - assets/images/introduction/noise-icon.png
     - assets/json/surah.json
+    - assets/json/juz.json
     - assets/images/quran_pages/578.png
     - assets/images/quran_pages/579.png
     - assets/images/quran_pages/580.png

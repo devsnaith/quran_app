@@ -16,11 +16,20 @@ class AppTexts {
 
   static const navigatorHomeButtonText = "Home";
   static const navigatorSurahButtonText = "Surah"; 
-  static const navigatorJuzzaButtonText = "Jyzza"; 
+  static const navigatorJuzzaButtonText = "Juz"; 
   static const navigatorSebhaButtonText = "Sebha";
 
   static const appBarText = "Welcome to the App ;)";
 
   static const sebhaInfoCardTitle = "Tasbih";
   static const sebhaInfoCardSubTitle = lastIntroductionPageDescraption;
+
+  static const String juzInfoCardTitle = "Juz";
+  static const String juzInfoCardSubTitle = "Click on the Juz number to view its information.";
+
+  static const String juzElementsCardItemTitle = "Juz Number";
+  
+  static const String juzInfoCardVerseNumberText = "Verse Number";
+  static const String juzInfoCardFromText = "From";
+  static const String juzInfoCardToText = "To";
 }
