@@ -32,7 +32,7 @@ class _JuzScreenState extends State<JuzScreen> {
       },
       
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 1),
         child: Builder(
           builder: (context) {
 

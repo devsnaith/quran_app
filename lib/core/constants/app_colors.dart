@@ -32,6 +32,15 @@ class AppColors {
   static Color juzScreenElementsTextFgColor = Colors.black;
   static Color juzScreenElementsBackIconBgColor = Colors.teal.withOpacity(0.2);
   static Color juzScreenElementsBgColor = Colors.teal.shade200;
+  
+  static Color appAudioPlayerBgColor = Colors.teal.shade100;
+  static Color appAudioDetailsBgColor = Colors.teal.shade200;
+  static Color appAudioDetailsTextsFgColor = Colors.black;
+
+  static Color audioPlayerSliderActiveColor = Colors.teal;
+  static Color audioPlayerSliderthumbColor = Colors.teal.shade200;
+  static Color audioPlayerSliderinactiveColor = Colors.teal.shade200;
+
   static List<Color> hadethCardColors = [
     const Color.fromARGB(255, 4, 90, 81),
     Colors.green.shade900,

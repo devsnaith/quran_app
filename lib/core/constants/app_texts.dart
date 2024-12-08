@@ -16,6 +16,7 @@ class AppTexts {
 
   static const navigatorHomeButtonText = "Home";
   static const navigatorSurahButtonText = "Surah"; 
+  static const navigatorAudioButtonText = "Audio"; 
   static const navigatorJuzzaButtonText = "Juz"; 
   static const navigatorSebhaButtonText = "Sebha";
 

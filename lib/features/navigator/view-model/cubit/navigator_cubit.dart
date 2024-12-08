@@ -1,6 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:quran/core/constants/app_constant.dart';
+import 'package:quran/features/audio/view/screens/audio_screen.dart';
 import 'package:quran/features/home/view/screens/home_view.dart';
 import 'package:quran/features/juz/view/screens/juz_screen.dart';
 import 'package:quran/features/navigator/model/navigator_model.dart';
@@ -19,6 +20,7 @@ class NavigatorCubit extends Cubit<AppNavigatorState> {
       pages: [
         const HomeView(),
         const SurahScreen(),
+        const AudioScreen(),
         const JuzScreen(),
         const SebhaScreen()
       ]),
