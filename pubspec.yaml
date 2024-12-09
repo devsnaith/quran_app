@@ -96,6 +96,35 @@ flutter:
     - assets/images/quran_pages/185.png
     - assets/images/quran_pages/186.png
     - assets/images/quran_pages/1.png
+    - assets/images/quran_pages/312.png
+    - assets/images/quran_pages/313.png
+    - assets/images/quran_pages/314.png
+    - assets/images/quran_pages/315.png
+    - assets/images/quran_pages/316.png
+    - assets/images/quran_pages/317.png
+    - assets/images/quran_pages/318.png
+    - assets/images/quran_pages/319.png
+    - assets/images/quran_pages/320.png
+    - assets/images/quran_pages/321.png
+    - assets/images/quran_pages/428.png
+    - assets/images/quran_pages/429.png
+    - assets/images/quran_pages/430.png
+    - assets/images/quran_pages/431.png
+    - assets/images/quran_pages/432.png
+    - assets/images/quran_pages/433.png
+    - assets/images/quran_pages/434.png
+    - assets/images/quran_pages/435.png
+    - assets/images/quran_pages/436.png
+    - assets/images/quran_pages/437.png
+    - assets/images/quran_pages/438.png
+    - assets/images/quran_pages/439.png
+    - assets/images/quran_pages/440.png
+    - assets/images/quran_pages/441.png
+    - assets/images/quran_pages/442.png
+    - assets/images/quran_pages/443.png
+    - assets/images/quran_pages/444.png
+    - assets/images/quran_pages/445.png
+    
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
   # For details regarding adding assets from package dependencies, see
