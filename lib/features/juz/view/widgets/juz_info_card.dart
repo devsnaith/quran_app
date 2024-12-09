@@ -40,28 +40,38 @@ class _JuzInfoCardState extends State<JuzInfoCard> {
           }, 
         );
       },
-      child: SizedBox(
-        height: 100,
-        child: Center(
-          child: GestureDetector(
-            child: FlipCard(
-              key: cardKey,
-              direction: FlipDirection.VERTICAL,
-              flipOnTouch: false,
-              back: juzModel == null ? const SizedBox.shrink() : JuzDetails(juzModel!),
-              front: Card(
-                color: AppColors.juzInfoCardBgColor,
-                child: ListTile(
-                  leading: const Icon(Icons.lightbulb),
-                  title: Text(AppTexts.juzInfoCardTitle,
-                      style: FontsStyle.lato(16, AppColors.juzInfoCardTextFgColor)),
-                  subtitle: Text(AppTexts.juzInfoCardSubTitle,
-                      style: FontsStyle.lato(13, AppColors.juzInfoCardTextFgColor)),
+      child: BlocBuilder<JuzCubit, JuzState>(
+        builder: (context, state) {
+          state.mapOrNull(juzSelected: (value) => juzModel = value.model);
+          return SizedBox(
+            height: 100,
+            child: Center(
+              child: GestureDetector(
+                child: FlipCard(
+                  key: cardKey,
+                  direction: FlipDirection.VERTICAL,
+                  flipOnTouch: false,
+                  side: juzModel != null? CardSide.BACK : CardSide.FRONT,
+                  back: juzModel == null
+                      ? const SizedBox.shrink()
+                      : JuzDetails(juzModel!),
+                  front: Card(
+                    color: AppColors.juzInfoCardBgColor,
+                    child: ListTile(
+                      leading: const Icon(Icons.lightbulb),
+                      title: Text(AppTexts.juzInfoCardTitle,
+                          style: FontsStyle.lato(
+                              16, AppColors.juzInfoCardTextFgColor)),
+                      subtitle: Text(AppTexts.juzInfoCardSubTitle,
+                          style: FontsStyle.lato(
+                              13, AppColors.juzInfoCardTextFgColor)),
+                    ),
+                  ),
                 ),
               ),
             ),
-          ),
-        ),
+          );
+        },
       ),
     );
   }

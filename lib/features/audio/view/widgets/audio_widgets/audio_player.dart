@@ -45,6 +45,7 @@ class _AppAudioPlayerState extends State<AppAudioPlayer> {
             onDismissed: (direction) {
               context.read<AppPlayerCubit>().distroy();
               context.read<EditionCubit>().fetchEditions();
+              context.read<SurahAudioCubit>().unSelect();
             },
             child: Card(
               color: AppColors.appAudioPlayerBgColor,

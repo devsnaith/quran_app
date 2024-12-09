@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_islamic_icons/flutter_islamic_icons.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:quran/core/constants/app_colors.dart';
 import 'package:quran/core/constants/app_constant.dart';
+import 'package:quran/features/audio/view-model/player_cubit/player_cubit.dart';
 import 'package:quran/features/audio/view/screens/audio_screen.dart';
 import 'package:quran/features/surah/view/screens/surah_screen.dart';
 class SurahAudioNavigator extends StatefulWidget {
@@ -23,6 +25,9 @@ class _SurahAudioNavigatorState extends State<SurahAudioNavigator>
 
     _tabController = TabController(length: 2, vsync: this);
     _tabController.index = AppConstant.surahAudioNavigatorBarDefaultIndex;
+    if(context.read<AppPlayerCubit>().isPlaying()) {
+      _tabController.index = 1;
+    }
   }
 
   @override

@@ -33,7 +33,7 @@ class AppTexts {
   static const String juzInfoCardFromText = "From";
   static const String juzInfoCardToText = "To";
 
-  static const String audioPlayerDismissibleHintText = "Swap the Player Card to Remove it";
+  static const String audioPlayerDismissibleHintText = "Swipe/Drag the Player to Reset it";
 
   static const String editionsInfoCardTitle = "Choose the reciter";
   static const String editionsInfoCardSubTitle = "Please select the reciter you want to listen to.";
