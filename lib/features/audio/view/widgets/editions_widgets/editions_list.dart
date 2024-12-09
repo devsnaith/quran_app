@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:quran/core/constants/app_colors.dart';
 import 'package:quran/features/audio/view-model/edition_cubit/edition_cubit.dart';
 import 'package:quran/features/audio/view/widgets/editions_widgets/editions_card.dart';
 import 'package:quran/features/audio/view/widgets/editions_widgets/editions_info_card.dart';
@@ -17,7 +18,7 @@ class _EditionsListState extends State<EditionsList> {
   Widget build(BuildContext context) {
     return Expanded(
       child: Card(
-        color: Colors.teal.shade100,
+        color: AppColors.editionsListBgColor,
         child: Column(
           children: [
             const EditionsInfoCard(),

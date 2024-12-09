@@ -17,5 +17,7 @@ class AppConstant {
 
   static int navigatorBarBtnSwitchDuration = 100;
   static int navigatorBarDefaultIndex = 0;
+  
+  static int surahAudioNavigatorBarDefaultIndex = 0;
 
 }

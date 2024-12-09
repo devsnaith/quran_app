@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quran/core/constants/app_colors.dart';
 import 'package:quran/core/utils/fonts_style.dart';
 
 class HadethCard extends StatelessWidget {
@@ -18,7 +19,7 @@ class HadethCard extends StatelessWidget {
       decoration: BoxDecoration(
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.4),
+            color: AppColors.hadethCardBoxShadowColor,
             spreadRadius: 2,
             blurRadius: 8,
             offset: const Offset(4, 4),

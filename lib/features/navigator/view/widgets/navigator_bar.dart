@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_islamic_icons/flutter_islamic_icons.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
@@ -30,9 +29,8 @@ class _NavigatorBarState extends State<NavigatorBar> {
 
   goToHome() => repository != null? repository?.setCurrentIndex(0, cubit) : false;
   goToSurah() => repository != null? repository?.setCurrentIndex(1, cubit) : false;
-  goToAudio() => repository != null? repository?.setCurrentIndex(2, cubit) : false;
-  goToJuzza() => repository != null? repository?.setCurrentIndex(3, cubit) : false;
-  goToSebha() => repository != null? repository?.setCurrentIndex(4, cubit) : false;
+  goToJuzza() => repository != null? repository?.setCurrentIndex(2, cubit) : false;
+  goToSebha() => repository != null? repository?.setCurrentIndex(3, cubit) : false;
   
   @override
   Widget build(BuildContext context) {
@@ -72,10 +70,6 @@ class _NavigatorBarState extends State<NavigatorBar> {
                       onPressed: goToSurah,
                       icon: FlutterIslamicIcons.quran,
                       text: AppTexts.navigatorSurahButtonText,
-                    ),GButton(
-                      onPressed: goToAudio,
-                      icon: Icons.headphones,
-                      text: AppTexts.navigatorAudioButtonText,
                     ),
                     GButton(
                       onPressed: goToJuzza,

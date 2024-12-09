@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_islamic_icons/flutter_islamic_icons.dart';
+import 'package:quran/core/constants/app_colors.dart';
 import 'package:quran/core/utils/fonts_style.dart';
 import 'package:quran/features/surah/models/surah_model.dart';
 
@@ -16,13 +17,13 @@ class SurahAudioCard extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: const BorderRadius.all(Radius.circular(12)),
-          boxShadow: const [
+          boxShadow: [
             BoxShadow(
-              color: Colors.black,
+              color: AppColors.surahAudioCardBoxShadowColor,
               blurRadius: 2,
             ),
           ],
-          color: Colors.teal.shade200,
+          color: AppColors.surahAudioCardBgColor,
         ),
         child: Stack(
           alignment: Alignment.center,
@@ -37,7 +38,7 @@ class SurahAudioCard extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.bottomRight,
                     child: Icon(
-                      color: const Color.fromARGB(255, 109, 172, 165),
+                      color: AppColors.surahAudioCardIconColor,
                       FlutterIslamicIcons.solidQuran2,
                       size: min(constraints.maxWidth, constraints.maxHeight) / 1.5,
                     ),
@@ -48,10 +49,10 @@ class SurahAudioCard extends StatelessWidget {
             ListTile(
               leading: Text(
                 surah.index.toString(),
-                style: FontsStyle.lato(15, Colors.black)
+                style: FontsStyle.lato(15, AppColors.surahAudioCardTextFgColor)
               ),
-              title: Text(surah.title, style: FontsStyle.lato(13, Colors.black)),
-              subtitle: Text(surah.titleAr, style: FontsStyle.lato(15, Colors.black)),
+              title: Text(surah.title, style: FontsStyle.lato(13, AppColors.surahAudioCardTextFgColor)),
+              subtitle: Text(surah.titleAr, style: FontsStyle.lato(15, AppColors.surahAudioCardTextFgColor)),
             ),
           ],
         ),

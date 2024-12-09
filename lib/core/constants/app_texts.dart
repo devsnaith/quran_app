@@ -15,8 +15,7 @@ class AppTexts {
   static const endIntroductionPageButtonText = "Start the journey";
 
   static const navigatorHomeButtonText = "Home";
-  static const navigatorSurahButtonText = "Surah"; 
-  static const navigatorAudioButtonText = "Audio"; 
+  static const navigatorSurahButtonText = "Surahs"; 
   static const navigatorJuzzaButtonText = "Juz"; 
   static const navigatorSebhaButtonText = "Sebha";
 
@@ -33,4 +32,16 @@ class AppTexts {
   static const String juzInfoCardVerseNumberText = "Verse Number";
   static const String juzInfoCardFromText = "From";
   static const String juzInfoCardToText = "To";
+
+  static const String audioPlayerDismissibleHintText = "Swap the Player Card to Remove it";
+
+  static const String editionsInfoCardTitle = "Choose the reciter";
+  static const String editionsInfoCardSubTitle = "Please select the reciter you want to listen to.";
+
+  static const String editionCardDetailsLanguageText = "Language";
+  static const String editionCardDetailsBitrateText = "Bitrate";
+
+  static const String surahsSearchBarText = "Search for Surah";
+
+  static const String surahsListChangeReciterText = "Change The Reciter";
 }

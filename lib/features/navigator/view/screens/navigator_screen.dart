@@ -19,7 +19,7 @@ class AppNavigator extends StatelessWidget {
       backgroundColor: AppColors.homePageBgColor,
       appBar: AppBar(
         backgroundColor: AppColors.appBarBgColor,
-        leading: const Icon(FlutterIslamicIcons.mosque, color: Colors.white),
+        leading: Icon(FlutterIslamicIcons.mosque, color: AppColors.appBarIconColor),
         title: Text(AppTexts.appBarText, style: FontsStyle.lato(16, AppColors.appBarTextFgColor)),
       ),
       body: Stack(

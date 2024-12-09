@@ -11,7 +11,7 @@ class IntroductionPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.transparent,
+      backgroundColor: AppColors.introductionPageBgColor,
       body: Stack(
         children: [
           LayoutBuilder(builder: (BuildContext context, BoxConstraints constraints) {

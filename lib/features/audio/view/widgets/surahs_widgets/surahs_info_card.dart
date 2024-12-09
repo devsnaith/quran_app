@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quran/core/constants/app_colors.dart';
+import 'package:quran/core/constants/app_texts.dart';
 import 'package:quran/core/utils/fonts_style.dart';
 
 class SurahsSearchBar extends StatelessWidget {
@@ -15,9 +16,9 @@ class SurahsSearchBar extends StatelessWidget {
         controller: controller,
         decoration: const InputDecoration(
           border: InputBorder.none,
-          hintText: "Search for Surah",
+          hintText: AppTexts.surahsSearchBarText,
         ),
-        style: FontsStyle.lato(16, AppColors.sebhaInfoCardTextFgColor),
+        style: FontsStyle.lato(16, AppColors.surahsSearchBarTextFgColor),
       ),
       // subtitle: Text("Please select the surah you want to listen to.", style: FontsStyle.lato(13, AppColors.sebhaInfoCardTextFgColor)),
     );

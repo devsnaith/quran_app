@@ -39,7 +39,7 @@ class _IntroductionScreen extends State<IntroductionScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.introductionPageBgColor,
+      backgroundColor: AppColors.introductionBgColor,
       body: Stack(
         children: [
           const ArabesqueWidget(),
@@ -76,16 +76,12 @@ class _IntroductionScreen extends State<IntroductionScreen> {
                           child: Center(
                             child: Text(
                               AppTexts.endIntroductionPageButtonText,
-                              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.teal.shade100),  
+                              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: AppColors.endIntroductionPageButtonTextFgColor),
                             ),
                           ),
                         ),
                       ),
                     )
-                    // OutlinedButton(
-                    //   onPressed: () => cubit.introductionCompleted(),
-                    //    child: const Text(AppTexts.endIntroductionPageButtonText)
-                    // ),
                   ),
                 ],
               ),

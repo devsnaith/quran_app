@@ -7,5 +7,8 @@ part 'surah_audio_cubit.freezed.dart';
 
 class SurahAudioCubit extends Cubit<SurahAudioState> {
   SurahAudioCubit() : super(const SurahAudioState.initial());
+  
+  void unSelect() => emit(const SurahAudioState.initial());
   void selectSurah(SurahModel surah) => emit(SurahAudioState.onSurahSelect(surah));
+
 }

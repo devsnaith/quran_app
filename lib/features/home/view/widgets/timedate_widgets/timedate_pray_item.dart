@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:quran/core/constants/app_colors.dart';
 import 'package:quran/core/utils/fonts_style.dart';
 import 'package:quran/features/home/models/pray_item_model.dart';
 
@@ -18,11 +18,11 @@ class PrayTimeItem extends StatelessWidget {
       children: [
         Text(
           prayTimeModel.prayName,
-          style: GoogleFonts.lato(color: Colors.white, fontSize: 20),
+          style: FontsStyle.lato(20, Colors.white),
         ),
         FaIcon(
           prayTimeModel.timeIcon,
-          color: Colors.white,
+          color: AppColors.prayTimeItemColor,
           size: 20,
         ),
         Text(

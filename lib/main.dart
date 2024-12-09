@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:quran/features/audio/view-model/edition_cubit/edition_cubit.dart';
+import 'package:quran/features/audio/view-model/player_cubit/player_cubit.dart';
 import 'package:quran/features/audio/view-model/surah_audio_cubit/surah_audio_cubit.dart';
 import 'package:quran/features/home/view-model/cubit/location_cubit.dart';
 import 'package:quran/features/introduction/view-model/cubit/introduction_cubit.dart';
@@ -35,10 +36,11 @@ class MyApp extends StatelessWidget {
           BlocProvider<NavigatorCubit>(create: (context) => NavigatorCubit()),
           BlocProvider<LocationCubit>(create: (context) => LocationCubit()),
           BlocProvider<SebhaCubit>(create: (context) => SebhaCubit()),
-          BlocProvider<SurahCubit>(create: (context) => SurahCubit()),
           BlocProvider<JuzCubit>(create: (context) => JuzCubit()),
+          BlocProvider<SurahCubit>(create: (context) => SurahCubit()),
           BlocProvider<EditionCubit>(create: (context) => EditionCubit()),
           BlocProvider<SurahAudioCubit>(create: (context) => SurahAudioCubit()),
+          BlocProvider<AppPlayerCubit>(create: (context) => AppPlayerCubit()),
         ],
         child: BlocBuilder<SplashCubit, SplashState>(
           builder: (context, state) {
